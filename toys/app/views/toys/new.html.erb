@@ -1,0 +1,12 @@
+<h1>New Toy</h1>
+<%= form_tag '/toys', method: :post do %>
+  <div>
+    <%= label_tag :name %>
+    <%= text_field_tag :name %>
+  </div>
+  <div>
+    <%= label_tag :game %>
+    <%= text_field_tag :game %>
+  </div>
+  <%= submit_tag "Add toy" %>
+<% end %>
