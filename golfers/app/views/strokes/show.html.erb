@@ -1,0 +1,6 @@
+<h1>All Strokes</h1>
+<h2>Name: <%= stroke.name %></h2>
+<p>Body: <%= stroke.body %></p>
+
+<%= link_to "Destroy this stroke", "/strokes/#{@stroke.id}", method: :delete %>
+<% end %>

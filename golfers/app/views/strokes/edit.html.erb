@@ -1,0 +1,12 @@
+<h1>Edit Stroke</h1>
+<%= form_tag "/strokes/#{@stroke}", method: :patch do %>
+<div>
+  <%= label_tag :name %>
+  <%= text_field_tag :name, @stroke.name %>
+</div>
+<div>
+  <%= label_tag :body %>
+  <%= text_field_tag :body, @stroke.body %>
+</div>
+<%= submit_tag "Create Stroke" %>
+<% end %>
