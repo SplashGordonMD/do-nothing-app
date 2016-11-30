@@ -1,0 +1,13 @@
+<h1>Zoo Animals</h1>
+<h2>Zoo Number 1:</h2>
+<%= @zoos.first.id %>
+<%= @zoos.first.animal %>
+<%= @zoos.first.enclosure %>
+  
+
+  <% @zoos.each do |zoo| %>
+    <%= zoo.id %>
+    <%= zoo.animal %>
+    <%= zoo.enclosure %>
+  <% end %>
+

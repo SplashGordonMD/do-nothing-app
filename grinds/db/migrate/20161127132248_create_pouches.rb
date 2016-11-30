@@ -1,0 +1,8 @@
+class CreatePouches < ActiveRecord::Migration[5.0]
+  def change
+    create_table :pouches do |t|
+
+      t.timestamps
+    end
+  end
+end
