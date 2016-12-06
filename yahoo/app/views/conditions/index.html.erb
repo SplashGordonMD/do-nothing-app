@@ -1,7 +1,16 @@
 <h1>Weather Forcast</h1>
 Current Forcast: <%= @conditions['query']['results']['channel']['item']['forecast']%>
-<% @forcasts.each do |forcast| %>
-<p><%= forcast %></p>
+
+<%= @description.html_safe %>
+
+<% @forcasts[0..4].each do |forcast| %>
+  <div>
+    <p><%= forcast["date"] %></p>
+    <p><%= forcast["day"] %></p>
+    <p><%= forcast["high"] %></p>
+    <p><%= forcast["low"] %></p>
+    <p><%= forcast["text"] %></p>
+  </div>
 <% end %>
 
  
