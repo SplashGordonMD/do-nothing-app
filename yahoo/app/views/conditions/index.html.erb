@@ -1,9 +1,22 @@
 <h1>Weather Forcast</h1>
+
+<%= form_tag "/conditions", method: :get do %>
+  <div>
+    <%= label_tag :city %>
+    <%= text_field_tag :city %>
+  </div>
+  <div>
+    <%= label_tag :state %>
+    <%= text_field_tag :state %>
+  </div>
+  <%= submit_tag "Submit" %>
+<% end %>
+
 Current Forcast: <%= @conditions['query']['results']['channel']['item']['forecast']%>
 
 <%= @description.html_safe %>
 
-<% @forcasts[0..4].each do |forcast| %>
+<% @conditions[0..4].each do |condition| %>
   <div>
     <p><%= forcast["date"] %></p>
     <p><%= forcast["day"] %></p>
