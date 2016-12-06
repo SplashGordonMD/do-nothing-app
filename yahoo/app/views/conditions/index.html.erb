@@ -1,6 +1,7 @@
-<h1>Chicago Weather Forcast</h1>
-<%= @conditions['query']['results']['channel']['item']['forecast']%>
+<h1>Weather Forcast</h1>
+Current Forcast: <%= @conditions['query']['results']['channel']['item']['forecast']%>
 <% @forcasts.each do |forcast| %>
 <p><%= forcast %></p>
 <% end %>
 
+ 
