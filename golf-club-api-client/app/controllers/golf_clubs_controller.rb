@@ -1,6 +1,7 @@
 class GolfClubsController < ApplicationController
   def index
-    render
+    @golf_clubs = Unirest.get("http://localhost:3000/golf_clubs").body
+    render 'index.html.erb'
   end
 
   def new
@@ -12,11 +13,11 @@ class GolfClubsController < ApplicationController
   end
 
   def show
-    render
+    render 'show.html.erb'
   end
 
   def edit
-    render
+    render 
   end
 
   def update

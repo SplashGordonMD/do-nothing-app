@@ -1,0 +1,6 @@
+<h1>Hello this is the index</h1>
+<% @golf_clubs.each do |golf_club| %>
+  <h3>Brand: <%= golf_club["brand"] %></h3>
+  <p>Variety: <%= golf_club["variety"] %></p>
+  <p>Number: <%= golf_club["number"] %></p>
+<% end %>
