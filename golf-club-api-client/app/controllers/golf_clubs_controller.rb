@@ -1,9 +1,30 @@
 class GolfClubsController < ApplicationController
-  get '/golf_clubs' => 'golf_clubs#index'
-  get '/golf_clubs/new' => 'golf_clubs#new'
-  post '/golf_clubs' => 'golf_clubs#create'
-  get '/golf_clubs/:id' => 'golf_clubs#show'
-  get '/golf_clubs/:id/edit' => 'golf_club#edit'
-  patch '/golf_clubs/:id' => 'golf_clubs#update'
-  delete '/golf_clubs/:id' => 'golf_clubs#destroy'
+  def index
+    render
+  end
+
+  def new
+    render
+  end
+
+  def create
+    render
+  end
+
+  def show
+    render
+  end
+
+  def edit
+    render
+  end
+
+  def update
+    render
+  end
+
+  def destroy
+    render
+  end
+
 end
