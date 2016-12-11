@@ -1,7 +1,13 @@
 class GolfClubsController < ApplicationController
   def index
-    @golf_clubs = Unirest.get("http://localhost:3000/golf_clubs").body
+    
+    @golf_clubs = Unirest.get(
+      "http://localhost:2000/golf_clubs",
+       headers: { 'Authorization' => "Token token=splash",
+        'X-User-Email' => "test@test.com"}).body
+    
     render 'index.html.erb'
+
   end
 
   def new
