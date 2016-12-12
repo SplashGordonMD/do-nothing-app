@@ -1,1 +1,12 @@
-edit.html.erb
+<h1>Edit Bug</h1>
+  <%= form_tag "/bugs/#{bug.id}", method: :patch do %>
+<div>
+  <%= label_tag :name %>
+  <%= text_field_tag :name, @bug.name %>
+</div>
+<div>
+  <%= label_tag :season %>
+  <%= text_field_tag :season, @bug.season %>
+</div>
+<% submit_tag "Update bugs" %>
+<% end %>
