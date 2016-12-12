@@ -1,4 +1,5 @@
 <h1>Message info</h1>
-<h2>Name: <%= bug.name %></h2>
-<p>Season: <%= bug.season %></p>
-<% end %>
+<h2>Name: <%= @bug.name %></h2>
+<p>Season: <%= @bug.season %></p>
+
+<%= link_to "Destroy this bug", "/bugs/#{@bug.id}", method: :delete %> 

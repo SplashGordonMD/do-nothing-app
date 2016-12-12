@@ -33,6 +33,8 @@ class BugsController < ApplicationController
   end
 
   def destroy
+    @bug = Bug.find_by(id: params[:id])
+    @bug.destroy
     render 'destroy.html.erb'
   end
 
