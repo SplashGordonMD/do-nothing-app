@@ -1,0 +1,2 @@
+class SweepsController < ApplicationController
+end
