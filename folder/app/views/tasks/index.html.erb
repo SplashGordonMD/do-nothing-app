@@ -1,9 +1,21 @@
 <h1>All Tasks</h1>
 
 <div ng-app="app">
-  {{ 1 + 1 }}
+  {{ 13 + 16 }}
   <div ng-controller="taskCtrl">
   	<p> {{ message}}</p>
-  	<p> {{ task1 }}</p>
+  	<p> Name: {{ myName }}</p>
+  	<p> Sum: {{ sum }}</p>
+  	<input ng-model="sum">
+  	<h3>Add Tasks</h3>
+  	<button ng-click="addReview()">Add Task</button>
+  	<ul>
+  		<li ng-repeat="task in tasks">{{ task }}</li>
+  	</ul>
+  	
+  	<p>Add a new task</p>
+
+  	<input ng-model="newTask">
+  	<button ng-click="addTask(newTask)">Add Task</button>
   </div>
 </div>
