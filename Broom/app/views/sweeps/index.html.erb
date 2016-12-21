@@ -1,0 +1,14 @@
+<h1>All Tasks</h1>
+
+<div ng-app="app">
+  {{ 1 + 1 }}
+  <div ng-controller="sweepsCtrl">
+    <div ng-repeat="task in tasks">
+      <p ng-click="completeTask(task)">{{ task }}</p>
+      <input ng-model="task">
+    </div>
+    <h3>Add a new task</h3>
+    <input ng-model="newTask">
+    <button ng-click="addTask(newTask)">Add task</button>
+  </div>
+</div>
