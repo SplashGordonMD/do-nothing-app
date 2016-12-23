@@ -1,3 +1,9 @@
 <div ng-app="app">
-  {{ 1 + 1 }}
+  <div ng-controller="golfClubsCtrl" ng-init="setup()">
+  	<div ng-repeat="golfclub in golfclubs">
+  		<p>{{golfclub.variety}}</p>
+  		<p>{{golfclub.number}}</p>
+  		<p>{{golfclub.brand}}</p>
+  	</div>
+  </div>
 </div>
