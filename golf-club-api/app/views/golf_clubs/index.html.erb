@@ -1,9 +1,27 @@
 <div ng-app="app">
   <div ng-controller="golfClubsCtrl" ng-init="setup()">
-  	<div ng-repeat="golfclub in golfclubs">
-  		<p>{{golfclub.variety}}</p>
-  		<p>{{golfclub.number}}</p>
-  		<p>{{golfclub.brand}}</p>
-  	</div>
-  </div>
-</div>
+    <div ng-repeat="golfclub in golfclubs">
+      <p>Variety: {{golfclub.variety}}</p>
+      <p>Number: {{golfclub.number}}</p>
+      <p>Brand: {{golfclub.brand}}</p>
+      <hr>
+    </div>
+    
+    <h4>Total number of golf clubs: {{ golfclubs.length }}</h4>
+
+    <h4>Add Golfclub</h4>
+    <ul>
+      <li ng-repeat="error in errors">{{ error }}</li>
+    <ul>  
+    <label>Variety: </label>
+    <input ng-model="newGolfVariety">
+    <label>Brand:</label>
+    <input ng-model="newGolfBrand">
+    <label>Number:</label>
+    <input ng-model="newGolfNumber">
+
+    <button ng-click="addGolfclub(newGolfVariety, newGolfBrand, newGolfNumber)">Add Golfclub</button>
+ </div>
+</div>    
+
+

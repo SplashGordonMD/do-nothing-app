@@ -1,3 +1,2 @@
 class GolfClub < ApplicationRecord
-	
 end
