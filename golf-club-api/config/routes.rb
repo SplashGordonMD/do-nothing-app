@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  get '/golf_clubs' => 'golf_clubs#index'
 
-  
-  get '/golf_clubs/:id' => 'golf_clubs#show'
+  namespace :api do
+    namespace :v1 do
+      get '/golf_clubs' => 'golf_clubs#index'
+      get '/golf_clubs/:id' => 'golf_clubs#show'
+    end
+  end
+
+  get '/golf_clubs' => 'golf_clubs#index'
 end
