@@ -1,11 +1,12 @@
 class IcecreamsController < ApplicationController
   
   def index 
-   @icecreams = Icecream.all
+  	 @icecreams = Icecream.all
    render 'index.html.erb'
   end
 
   def new
+  	@icecreams = Icecream.new
    render 'new.html.erb'
   end
 
@@ -14,6 +15,7 @@ class IcecreamsController < ApplicationController
   end
 
   def show
+  	@icecreams=Icecream.find_by(id: params[:id])
    render 'show.html.erb'
   end
 

@@ -1,0 +1,15 @@
+<h1>New message</h1>
+<%= form_tag '/icecreams', method: :post do %>
+	<div>
+		<% label_tag :name %>
+		<% text_field_tag :name %>
+	</div>
+    <div>
+		<% label_tag :flavor %>
+		<% text_field_tag :flavor %>
+	</div>
+		<%= submit_tag "Create icecream" %>
+  <% end %>
+
+ @icecreams = icecream.new
+ 	render 'new.html.erb'
