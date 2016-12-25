@@ -12,6 +12,8 @@ class PetsController < ApplicationController
  	end 	
 
  	def create
+ 		pet = Pet.new(name: params[:name], care: params[:care])
+ 		pet.save
  		render 'create.html.erb'
  	end
 

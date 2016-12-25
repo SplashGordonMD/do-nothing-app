@@ -1,1 +1,5 @@
-show.html.erb
+<h1>Movie information</h1>
+<h2>Name: <%= @movie.name %></h2>
+<h2>Genera: <%= @movie.genera %></h2>
+
+<%= link_to "Destroy this message", "/movies/#{@movie.id}", method: :delete %>
