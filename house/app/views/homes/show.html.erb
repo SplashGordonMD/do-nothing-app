@@ -1,1 +1,4 @@
-show.html.erb
+<h1>Homes Info</h1>
+<h2>Set: <%= @home.set %></h2>
+ <p>Variety: <%= @home.variety %></p> 
+ <% link_to "Destroy this listing", "/homes/#{@home.id}", method: :delate %>

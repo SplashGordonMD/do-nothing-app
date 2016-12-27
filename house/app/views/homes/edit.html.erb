@@ -1,1 +1,12 @@
-edit.html.erb
+<h1>Edit Message</h1>
+<%= form_tag '/homes/#{@home.id}', method: :patch do %>
+	<div>
+		<%= label_tag :set %>
+		<%= text_field_tag :set, @home.set %>
+	</div>
+	<div>
+		<%= label_tag :variety %>
+		<%= text_field_tag :variety, @home.variety %>
+	</div>
+	<%= submit_tag "Update message" %>
+  <% end %>	
