@@ -1,0 +1,12 @@
+<h1>New Message</h1>
+<%= form_tag '/homes', method: :post do %>
+	<div>
+		<%= label_tag :set %>
+		<%= text_field_tag :set %>
+	</div>
+	<div>
+		<%= label_tag :variety %>
+		<%= text_field_tag :variety %>
+	</div>
+	<%= submit_tag "Create message" %>
+  <% end %>	
