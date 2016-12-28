@@ -10,8 +10,10 @@ class Api::V1::GolfClubsController < ApplicationController
   end
 
   def create
-  	@golf_club = GolfClub.new(variety: params[:variety],
-         brand: params[:brand], number: params[:number])
+  	@golf_club = GolfClub.new(
+      variety: params[:variety],
+      brand: params[:brand], 
+      number: params[:number])
 
   	if @golf_club.save
   		render 'show.json.jbuilder'

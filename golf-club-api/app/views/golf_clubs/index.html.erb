@@ -1,7 +1,26 @@
-<h1>Golf CLubs Ap</h1>
+<h1>Golf Clubs Ap</h1>
 
 <div ng-app="app">
   <div ng-controller="golfClubsCtrl" ng-init="setup()">
+    <div ng-repeat="golf club in golf club"> 
+     <h2 ng-click="toggleBrandVisible(golfclub)">{{golf_club.variety}}</h2>
+     <p ng-class="{strike: golfclub.BrandVisible}">{{golf_club.brand}}</p>
+     <a href="#" ng-click="deleteGolfClub(person)">Delete</a>
+     </div>
+     <h4> Total number of Golf clubs: {{ golfclub.lenght }}</h4>
+     <H4>Add Golf Club</H4>
+     <ul>
+      <li ng-repeat="error in errors">{{ error}}</li>
+     </ul>
+     <div>
+      <label>Vierty: </label>
+      <input ng-model="newGolfclubVariety">
+      <label>Brand: </label>
+      <input ng-model="newGolfclubBrand">
+      <button ng-click="addGolfclub(newGolfClubVariety, 
+              NewGolfClubBrand)">Add Golf Club</buttom>
+    
+
     Search by variety: <input ng-model="varietyFilter">
     Search by brand: <input ng-model="brandFilter">
     <table border=1>
