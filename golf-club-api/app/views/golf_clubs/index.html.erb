@@ -1,14 +1,27 @@
 <div ng-app="app">
   <div ng-controller="golfClubsCtrl" ng-init="setup()">
-    <div ng-repeat="golfclub in golfclubs">
+    Search by variety: <input ng-model="varietyFilter">
+    Search by brand: <input ng-model="brandFilter">
+    <table border=1>
+    <tr>
+      <th>Variety</th>
+      <th>Brand</th>
+      <th>Number</th>
+    </tr>
+    </table>
+    <tr ng-repeat="golfclub in golfclubs | filter: {variety: varietyFilter, brand: brandFilter} | orderBy:orderAttribute">
+    <div>
+      <button ng-click="changeOrderAttribute('variety')">Order by variety</button>
+      <button ng-click="changeOrderAttribute('brand')">Order by brand</button>
+      <button ng-click="changeOrderAttribute('number')">Order by number</button>
+    </div>
+    <div ng-repeat="golfclub in golfclubs | filter: {variety: varietyFilter, brand: brandFilter} | orderBy:orderAttribute">
       <p>Variety: {{golfclub.variety}}</p>
       <p>Number: {{golfclub.number}}</p>
       <p>Brand: {{golfclub.brand}}</p>
       <hr>
     </div>
-    
     <h4>Total number of golf clubs: {{ golfclubs.length }}</h4>
-
     <h4>Add Golfclub</h4>
     <ul>
       <li ng-repeat="error in errors">{{ error }}</li>

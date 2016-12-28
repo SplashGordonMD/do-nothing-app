@@ -6,7 +6,7 @@
 //= require_tree ./channels
 
 (function() {
-  this.App || (this.App = {});
+  angular.module("app").controller("peopleCtrl", function($scope, $http) {}
 
   App.cable = ActionCable.createConsumer();
 

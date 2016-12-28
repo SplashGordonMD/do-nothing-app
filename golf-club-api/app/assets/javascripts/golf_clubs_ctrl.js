@@ -22,8 +22,14 @@
         $scope.errors = error.data.errors;
       });
     };
-    
-  });
+
+    $scope.changeOrderAttribute = function(inputAttribute) {
+      if (inputAttribute === $scope.orderAttribute) {
+     } else {
+      scope.isOrderDescending = false;
+    }
+   $scope.orderAttribute = inputAttribute; 
+  };
 })();
 
-	
+end	

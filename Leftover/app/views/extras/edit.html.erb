@@ -1,5 +1,5 @@
 <h1>Update Leftover</h1>
-<%= form_tag '/extras', mothod: :post do %>
+<%= form_tag '/extras/#{@extra.id}', method: :patch do %>
 	<div>
 	<%= label_tag :name %>
 	<%= text_field_tag :name @extra.name %>
