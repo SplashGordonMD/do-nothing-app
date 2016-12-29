@@ -1,0 +1,6 @@
+<h1>Contacts Information</h1>
+<h2>Name: <%= @contact.name %></h2>
+<p>Phone: <%= @contact.phone %></p>
+<p>City: <%= @contact.city %></p>
+
+<%= link_to "Destroy this Contact", "/contacts/#{@contact.id}", method: :delete %>
