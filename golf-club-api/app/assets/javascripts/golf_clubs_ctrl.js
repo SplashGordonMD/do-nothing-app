@@ -31,8 +31,11 @@
      } else {
       scope.isOrderDescending = false;
     }
-   $scope.orderAttribute = inputAttribute; 
-  
+   $scope.orderAttribute = function(inputAttribute) { 
+      $scope.orderAttribute = inputeAttribute;
+      $scope.isOrderDescending = !$scope.isOrderDecending;
+    };
+
     window.$scope = $scope;
   };
 })();

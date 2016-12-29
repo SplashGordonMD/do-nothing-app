@@ -9,10 +9,15 @@ class ContactsController < ApplicationController
 	end
 
 	def create
-		@contact = Contact.new(name: params[:name],
+		@contact = Contact.new(id: params[:id],
+			name: params[:name],
 		phone: params[:phone], city: params[:city])
-		@contact.save
-		render 'create.html.erb'
+
+		if @contact.save
+			redirect_to "/contacts/#{@contact.id}" 
+		else
+			render 'new.html.erb'
+		end
 	end
 
 	def show

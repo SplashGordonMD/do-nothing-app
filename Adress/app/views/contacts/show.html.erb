@@ -4,3 +4,7 @@
 <p>City: <%= @contact.city %></p>
 
 <%= link_to "Destroy this Contact", "/contacts/#{@contact.id}", method: :delete %>
+
+<%= link_to "Edit this Contact", "/contacts/#{@contact.id}/edit" %>
+
+<%= link_to "Back to all Contacts", "/contacts" %>
