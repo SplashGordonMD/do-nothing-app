@@ -2,7 +2,12 @@
 
 <div ng-app="app">
   <div ng-controller="golfClubsCtrl" ng-init="setup()">
-    <div ng-repeat="golf club in golf club"> 
+    Search: <input ng-model="varietyFilter">
+    <div>
+    <button ng-click="changeOrderAttribute('variety')">Order by variety</button>
+    <button ng-click="changeOrderAttribute('brand')">Order by brand</button>
+    </div>
+    <div ng-repeat="golfclub in golfclub | filter: {variety: varietyFilter} | orderBy:attribute">
      <h2 ng-click="toggleBrandVisible(golfclub)">{{golf_club.variety}}</h2>
      <p ng-class="{strike: golfclub.BrandVisible}">{{golf_club.brand}}</p>
      <a href="#" ng-click="deleteGolfClub(person)">Delete</a>
@@ -55,6 +60,11 @@
     <input ng-model="newGolfNumber">
 
     <button ng-click="addGolfclub(newGolfVariety, newGolfBrand, newGolfNumber)">Add Golfclub</button>
+
+    $scope.changeOrderAttribute = function(inputAttribute) {
+      $scope.orderAttribute:
+    }
+
  </div>
 </div>    
 
