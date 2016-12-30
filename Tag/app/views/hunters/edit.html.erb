@@ -1,0 +1,12 @@
+<h1>Edit Hunting Varieties</h1>
+<%= form_tag "/hunters/#{@hunter.id}", method: :patch do %>
+  <div>
+    <%= label_tag :sport %>
+    <%= text_field_tag :sport, @hunter.name %>
+  </div>
+  <div>
+    <%= label_tag :season %>
+    <%= text_field_tag :season, @hunter.season %>
+  </div>
+    <%= submit_tag "Update Hunting" %>
+  <% end %>
