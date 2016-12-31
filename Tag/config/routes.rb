@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  
-
   get '/hunters' => 'hunters#index'
   get '/hunters/new' => 'hunters#new'
   post '/hunters' => 'hunters#create'

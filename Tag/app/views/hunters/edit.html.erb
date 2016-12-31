@@ -2,7 +2,7 @@
 <%= form_tag "/hunters/#{@hunter.id}", method: :patch do %>
   <div>
     <%= label_tag :sport %>
-    <%= text_field_tag :sport, @hunter.name %>
+    <%= text_field_tag :sport, @hunter.sport %>
   </div>
   <div>
     <%= label_tag :season %>
