@@ -13,4 +13,21 @@ RSpec.describe List, type: :model do
       end
     end
   end
-end
+
+  describe '#snooze_all_tasks!' do
+  	it 'should each task by by 1 hour' do
+  		list = List.create(name: "Chores")
+  		task deadline = Time.now
+  		task1 = Task.create(deadline: task_deadline, list_id: list.id)
+  		task2 = Task.create(deadline: task_deadline, list_id: list.id)
+  		task3 = Task.create(deadline: task_deadline, list_id: list.id)
+  			list.each do |task|
+  				expect(task.deadline).to eq(task_deadline + 1.hour)
+  			end
+		end
+	end
+
+
+
+
+
