@@ -11,4 +11,9 @@ console.log(color);
 
 console.log("Awesome!!!");
 
+function text(x = 23) {
+	console.log(x);
+}
+ text();
+ console.log("Whooaaaaaa!!!");
 
