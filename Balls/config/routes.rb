@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get '/sports' => 'sports#index'
   get '/sports/new' => 'sports#new'
   post '/sports' => 'sports#create'
@@ -8,3 +7,11 @@ Rails.application.routes.draw do
   patch '/sports/:id' => 'sports#update'
   delete '/sports/:id' => 'sports#destroy'  
 end
+
+ #get '/contacts_johns' => 'contacts#index_johns'
+ # get '/signup' => 'users#new'
+ # post '/users' => 'users#create'
+  #get '/login' => 'sessions#new'
+ # post '/login' => 'sessions#create'
+  #get '/logout' => 'sessions#destroy'
+#end

@@ -9,9 +9,15 @@ class SportsController < ApplicationController
   end
   
   def create
-    sport = Sport.new(name: params[:name], tool: params[:tool])
+    sport = Sport.new(
+    name: params[:name],
+    tool: params[:tool]
+    )
+    sport.name = params[:name]
+    sport.tool = params[:tool]
     sport.save
-    render 'create.html.erb'
+    flash[:success] = "New Sport created"
+    redirect_to "/sports/#{@sport.id}"
   end
   
   def show
@@ -29,12 +35,14 @@ class SportsController < ApplicationController
     @sport.name = params[:name]
     @sport.tool = params[:tool]
     @sport.save
-    render 'update.html.erb'
+    flash[:success] = "New Sport created"
+    redirect_to "/sports/#{@sport.id}"
   end
 
   def destroy
     @sport = Sport.find_by(id: params[:id])
     @sport.destroy
-    render 'destroy.html.erb'
+    flash[:success] = "New Sport created"
+    redirect_to "/sports/#{@sport.id}"
   end 
 end
