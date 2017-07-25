@@ -9,18 +9,7 @@
   </head>
 
   <body>
-     <div class="container">
-       <% flash.each do |sport, tool| %>
-        <div class="alert alert-<%= sport %>" role="alert"><%= sport %></div>
-		 <div class="alert alert-<%= sport %> alert-dismissible" role="alert">
-		  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		  <%= sport %>
-		 </div>
-        
-
-         <% end %>
-
-     <nav class="navbar navbar-default">
+  <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -30,13 +19,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Contact App</a>
+          <a class="navbar-brand" href="/sports">Sports App</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/contacts/new">Add Contact<span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="/contacts/new">Add Sport<span class="sr-only">(current)</span></a></li>
             <li><a href="#">Link</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -89,3 +78,14 @@
    </div>
   </body>
 </html>
+
+     <div class="container">
+       <% flash.each do |sport, tool| %>
+		 <div class="alert alert-<%= sport %> alert-dismissible" role="alert">
+		  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		  <%= sport %>
+		 </div>
+    
+    <% end %>
+
+     
