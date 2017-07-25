@@ -1,11 +1,12 @@
 <h1> All Sports </h1>
 <div class="row">
   <% @sports.each do |sport| %>
-    <div class="col-md-4">
+   <div class="col-md-4">
     <div class="well">
-    <h1><a href="/sports/<%= sport.id %>"><%= sport.name %></a></h1>
-    <h4>Tool: <%= sport.tool %></h4>
-    <img src="" alt="football-player-tackling-cartoon-football-player-bulky.jpg "> width='200px'>
+      <h1><a href="/sports/<%= sport.id %>"><%= sport.name %></a></h1>
+      <h4>Tool: <%= sport.tool %></h4>
+      <img src"<%= sport.image %>" alt="">
     </div>
+   </div>
   <% end %>  
  </div>
