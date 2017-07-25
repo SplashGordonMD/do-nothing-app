@@ -1,12 +1,14 @@
 <h1> All Sports </h1>
-<div class="row">
-  <% @sports.each do |sport| %>
-   <div class="col-md-4">
-    <div class="well">
+<% @sports.each_slice(3) do |three_sports| %>
+  <div class="row">
+   <% three_sports.each do |sport| %>
+    <div class="col-md-4">
+     <div class="well">
       <h1><a href="/sports/<%= sport.id %>"><%= sport.name %></a></h1>
       <h4>Tool: <%= sport.tool %></h4>
-      <img src"<%= sport.image %>" alt="">
+      <img src="<%= sport.image %>" alt="">
+     </div>
     </div>
-   </div>
-  <% end %>  
- </div>
+   <% end %>  
+  </div>
+ <% end %>
