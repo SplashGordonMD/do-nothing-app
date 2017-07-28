@@ -10,39 +10,43 @@ class SportsController < ApplicationController
   
   def create
     sport = Sport.new(
-    name: params[:name],
-    tool: params[:tool]
+    name: params["name"],
+    tool: params["tool"]
     )
     sport.name = params[:name]
     sport.tool = params[:tool]
     sport.save
     flash[:success] = "New Sport created"
-    redirect_to "/sports/#{@sport.id}"
+    redirect_to "/sports/#{sport.id}"
   end
   
   def show
-    @sport = Sport.find_by(id: params[:id])
+    sport_id = params[:id]
+    @sport = Sport.find_by(id: sport_id)
     render 'show.html.erb'
   end
 
   def edit
-    @sport = Sport.find_by(id: params[:id])
+    sport_id = params[:id]
+    @sport = Sport.find_by(id: sport_id)
     render 'edit.html.erb'
   end
   
   def update
-    @sport = Sport.find_by(id: params[:id])
-    @sport.name = params[:name]
-    @sport.tool = params[:tool]
-    @sport.save
-    flash[:success] = "New Sport created"
+    sport_id = params[:id]
+    sport = Sport.find_by(id: sport_id)
+    sport.name = params[:name]
+    sport.tool = params[:tool]
+    sport.save
+    flash[:success] = "Sports successfully updated"
     redirect_to "/sports/#{@sport.id}"
   end
 
   def destroy
-    @sport = Sport.find_by(id: params[:id])
-    @sport.destroy
-    flash[:success] = "New Sport created"
-    redirect_to "/sports/#{@sport.id}"
+    sport_id = params[:id]
+    sport = Sport.find_by(id: sport_id)
+    sport.destroy
+    flash[:warning] = "Sport successfully destroyed"
+    redirect_to "/sports"
   end 
 end

@@ -4,11 +4,11 @@
    <% three_sports.each do |sport| %>
     <div class="col-md-4">
      <div class="well">
-      <h1><a href="/sports/<%= sport.id %>"><%= sport.name %></a></h1>
-      <h4>Tool: <%= sport.tool %></h4>
-      <img src="<%= sport.image %>" alt="">
+      <h2><a href="/sports/<%= sport.id %>"><%= sport.name %></a></h2>
+      <img src="<%= sport.image %>" alt"">
+      <h4>Tool: <%= sports_list.each do |name| %></h4>
      </div>
     </div>
-   <% end %>  
-  </div>
- <% end %>
+   <% end %> 
+  </div> 
+ <% end %>  

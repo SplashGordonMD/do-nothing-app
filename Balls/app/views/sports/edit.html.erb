@@ -1,12 +1,12 @@
 <h1>Edit Message</h1>
 <%= form_tag "/sports/#{@sport.id}", method: :patch do %>
- <div>
+ <div class="form-group">
    <%= label_tag :name %> 
-   <%=  text_field_tag :name, @sport.name %> 
+   <%=  text_field_tag :name, @sport.name, class: 'form control' %> 
  </div>
- <div>
+ <div class="form-group">
    <%= label_tag :tool %> 
-   <%=  text_field_tag :tool, @sport.tool %> 
+   <%=  text_field_tag :tool, @sport.tool, class: 'form control' %> 
  </div>
- <%= submit_tag "Update sport" %>
+ <%= submit_tag "Edit sport", class: "btn btn-primary" %>
 <% end %> 
