@@ -64,9 +64,7 @@
     </nav>
 
     <div class="container">  
-
-    <% flash.each do |name, message| %>
-     
+    <% flash.each do |name, tool| %>
       <div class="alert alert-<%= name %> alert-dismissible" role="alert">
       <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
       <%= message %>

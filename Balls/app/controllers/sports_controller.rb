@@ -1,6 +1,11 @@
 class SportsController < ApplicationController
   def index
-    @sports = Sport.all
+    sort_attribute = params[:sort]
+    if current_user
+      @sports = current_user.sports
+    else
+      @sports = []
+    end
     render 'index.html.erb'
   end
   

@@ -1,4 +1,4 @@
-<h1>Edit Message</h1>
+<h1>Edit Sport</h1>
 <%= form_tag "/sports/#{@sport.id}", method: :patch do %>
  <div class="form-group">
    <%= label_tag :name %> 
@@ -10,3 +10,14 @@
  </div>
  <%= submit_tag "Edit sport", class: "btn btn-primary" %>
 <% end %> 
+
+<h1>Edit Recipe</h1>
+<%= form_tag '/recipes/:id', method: :patch do %>
+  <div>
+    Sport: <input type="text" name="sport" value="<%= @sport.name %>">
+  </div>
+  <div>
+    Tool: <input type="text" name="tool" value="<%= @tool.name %>">
+  </div>
+  <input type="submit" value="Update Sport">
+<% end %>
