@@ -6,7 +6,13 @@
      <div class="well">
       <h2><a href="/sports/<%= sport.id %>"><%= sport.name %></a></h2>
       <img src="<%= sport.image %>" alt"">
-      <h4>Tool: <%= sports_list.each do |name| %></h4>
+      <p> Tools: <%= sport.tools %></p>
+      <h4>Tools: </h4>
+      <ul>
+        <% sport.tools_list.each do |tool| %>
+          <li><%= tool %></li>
+        <% end %>
+      </ul>    	
      </div>
     </div>
    <% end %> 
