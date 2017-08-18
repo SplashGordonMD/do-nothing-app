@@ -1,12 +1,12 @@
 <h1>Add New Stock</h1>
 <%= form_tag '/stocks', method: :post do %>
-	<div>
+	<div class="form-group">
 	<%= label_tag :name %>
 	<%= text_field_tag :name %>
 	</div>
-	<div>
+	<div class="form-group">
 	<%= label_tag :price %>
 	<%= text_field_tag :price %>
 	</div>
-	<%= submit_tag "New stock" %>
+	<%= submit_tag "Update Stock List", class: "btn btn-primary" %>
 	<% end %>
