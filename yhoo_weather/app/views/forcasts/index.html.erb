@@ -1,0 +1,12 @@
+<h1>Weather Forcast API</h1>
+<p>Current Temperature: <%= @temperature %> degrees</p>
+<p>Forcast Data: </p>
+<%= @forcasts[0..5].each do |forcast| %>
+  <div>	
+	<%= forcast["date"] %>
+	<%= forcast["day"] %>
+	<%= forcast["high"] %>
+	<%= forcast["low"] %>
+	<%= forcast["text"] %>
+  </div>	
+<% end %>
