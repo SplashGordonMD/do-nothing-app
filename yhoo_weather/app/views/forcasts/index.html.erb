@@ -1,5 +1,8 @@
 <h1>Weather Forcast API</h1>
 <p>Current Temperature: <%= @temperature %> degrees</p>
+
+<%= @description.html_safe %>
+
 <p>Forcast Data: </p>
 <%= @forcasts[0..5].each do |forcast| %>
   <div>	
