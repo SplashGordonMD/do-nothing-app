@@ -14,7 +14,7 @@
 
 
 <p>Forcast Data: </p>
-<%= @forcasts[0..5].each do |forcast| %>
+<% @forcasts[0..5].each do |forcast| %>
   <div>	
 	<%= forcast["date"] %>
 	<%= forcast["day"] %>
